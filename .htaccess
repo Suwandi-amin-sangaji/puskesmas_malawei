@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Cek apakah file atau direktori fisik ada
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite URL dengan menambahkan ekstensi .php
+RewriteRule ^(.+)$ $1.php [L]
